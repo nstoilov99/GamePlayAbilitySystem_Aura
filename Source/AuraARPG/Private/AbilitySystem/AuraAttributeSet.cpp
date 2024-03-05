@@ -6,9 +6,22 @@
 #include "GameFramework/Character.h"
 #include "GameplayEffectExtension.h"
 #include "Net/UnrealNetwork.h"
+#include "AuraGameplayTags.h"
 
 UAuraAttributeSet::UAuraAttributeSet()
 {
+	//Example for function pointers
+	//RandomFunctionPointer = RandomFunction;
+	//float F = RandomFunctionPointer(0, 0.0f, 0);
+
+	//FAttributeSignature StrengthDelegate;
+	//StrengthDelegate.BindStatic(GetStrengthAttribute);
+	const FAuraGameplayTags& GameplayTags = FAuraGameplayTags::Get();
+
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Strength, GetStrengthAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Intelligence, GetIntelligenceAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Resilience, GetResilienceAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Vigor, GetVigorAttribute);
 
 }
 
