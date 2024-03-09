@@ -72,14 +72,14 @@ void AAuraPlayerController::AbilityInputTagReleased(FGameplayTag InputTag)
 {
 	if (!InputTag.MatchesTagExact(FAuraGameplayTags::Get().InputTag_ActionPrimary))
 	{
-		if (GetASC() == nullptr) GetASC()->AbilityInputTagReleased(InputTag);
+		if (GetASC()) GetASC()->AbilityInputTagReleased(InputTag);
 
 		return;
 	}
 
 	if (bTargeting)
 	{
-		if (GetASC() == nullptr) GetASC()->AbilityInputTagReleased(InputTag);
+		if (GetASC()) GetASC()->AbilityInputTagReleased(InputTag);
 	}
 	else
 	{
@@ -106,14 +106,14 @@ void AAuraPlayerController::AbilityInputTagHeld(FGameplayTag InputTag)
 {
 	if (!InputTag.MatchesTagExact(FAuraGameplayTags::Get().InputTag_ActionPrimary))
 	{
-		if (GetASC() == nullptr) GetASC()->AbilityInputTagHeld(InputTag);
+		if (GetASC()) GetASC()->AbilityInputTagHeld(InputTag);
 
 		return;
 	}
 
 	if (bTargeting)
 	{
-		if (GetASC() == nullptr) GetASC()->AbilityInputTagHeld(InputTag);
+		if (GetASC()) GetASC()->AbilityInputTagHeld(InputTag);
 
 	}
 	else

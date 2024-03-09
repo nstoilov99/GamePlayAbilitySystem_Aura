@@ -1,7 +1,7 @@
 // Copyright ShutInGaming
 
-#include "AbilitySystem/Abilities/AuraGameplayAbility.h"
 #include "AbilitySystem/AuraAbilitySystemComponent.h"
+#include "AbilitySystem/Abilities/AuraGameplayAbility.h"
 
 void UAuraAbilitySystemComponent::AbilityActorInfoSet()
 {
