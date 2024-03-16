@@ -39,6 +39,8 @@ public:
 	FGameplayTag InputTag_ActionSlot2;
 	FGameplayTag InputTag_ActionSlot3;
 	FGameplayTag InputTag_ActionSlot4;
+
+	FGameplayTag Damage;
 private:
 	static FAuraGameplayTags GameplayTags;
 };
