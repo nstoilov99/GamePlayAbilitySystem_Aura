@@ -11,6 +11,7 @@
 #include "Components/AudioComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
 #include "AbilitySystemComponent.h"
+#include "AbilitySystem/AuraAbilitySystemLibrary.h"
 
 // Sets default values
 AAuraProjectile::AAuraProjectile()
@@ -57,6 +58,10 @@ void AAuraProjectile::Destroyed()
 void AAuraProjectile::OnSphereOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if (GetOwner() == OtherActor)
+	{
+		return;
+	}
+	if (!UAuraAbilitySystemLibrary::IsNotFriend(GetOwner(), OtherActor))
 	{
 		return;
 	}
