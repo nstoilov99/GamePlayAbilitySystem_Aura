@@ -42,10 +42,12 @@ public:
 
 	FGameplayTag InputTag_ActionPrimary;
 	FGameplayTag InputTag_ActionSecondary;
-	FGameplayTag InputTag_ActionSlot1;
-	FGameplayTag InputTag_ActionSlot2;
-	FGameplayTag InputTag_ActionSlot3;
-	FGameplayTag InputTag_ActionSlot4;
+	FGameplayTag InputTag_ActionSlot_1;
+	FGameplayTag InputTag_ActionSlot_2;
+	FGameplayTag InputTag_ActionSlot_3;
+	FGameplayTag InputTag_ActionSlot_4;
+	FGameplayTag InputTag_Passive_1;
+	FGameplayTag InputTag_Passive_2;
 
 	FGameplayTag Damage;
 	FGameplayTag Damage_Fire;
