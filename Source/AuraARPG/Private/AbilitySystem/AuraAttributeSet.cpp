@@ -218,7 +218,7 @@ void UAuraAttributeSet::HandleIncomingXP(const FEffectProperties& Props)
 	}
 }
 
-void UAuraAttributeSet::Debuff(const FEffectProperties& Props)
+void UAuraAttributeSet::HandleDebuff(const FEffectProperties& Props)
 {
 }
 
