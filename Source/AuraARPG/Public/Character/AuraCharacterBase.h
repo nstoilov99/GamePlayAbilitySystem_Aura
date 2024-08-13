@@ -41,6 +41,7 @@ public:
 	virtual ECharacterClass GetCharacterClass_Implementation() override;
 	virtual FOnASCRegistered GetOnASCRegisteredDelegate() override;
 	virtual FOnDeath& GetOnDeathDelegate() override;
+	virtual void Knockback(const FVector& KnockbackImpulse) override;
 	/** end Combat Interface */
 
 	FOnASCRegistered OnAscRegistred;

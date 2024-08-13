@@ -154,6 +154,11 @@ FOnDeath& AAuraCharacterBase::GetOnDeathDelegate()
 	return OnDeath;
 }
 
+void AAuraCharacterBase::Knockback(const FVector& KnockbackImpulse)
+{
+	LaunchCharacter(KnockbackImpulse, true, true);
+}
+
 void AAuraCharacterBase::InitAbilityActorInfo()
 {
 }
