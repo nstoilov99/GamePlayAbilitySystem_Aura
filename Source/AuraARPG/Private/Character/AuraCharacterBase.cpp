@@ -159,6 +159,11 @@ void AAuraCharacterBase::Knockback(const FVector& KnockbackImpulse)
 	LaunchCharacter(KnockbackImpulse, true, true);
 }
 
+USkeletalMeshComponent* AAuraCharacterBase::GetWeapon_Implementation()
+{
+	return Weapon;
+}
+
 void AAuraCharacterBase::InitAbilityActorInfo()
 {
 }
