@@ -195,7 +195,7 @@ void FAuraGameplayTags::InitializeNativeGameplayTags()
 		FString("Debuff for Physical damage")
 	);
 
-	GameplayTags.Attributes_Resistance_Physical = UGameplayTagsManager::Get().AddNativeGameplayTag(
+	GameplayTags.Debuff_Stun = UGameplayTagsManager::Get().AddNativeGameplayTag(
 		FName("Debuff.Stun"),
 		FString("Debuff for Lightning damage")
 	);
