@@ -176,9 +176,13 @@ void UAuraAttributeSet::HandleIncomingDamage(const FEffectProperties& Props)
 		}
 		else
 		{
-			FGameplayTagContainer TagContainer;
-			TagContainer.AddTag(FAuraGameplayTags::Get().Effects_HitReact);
-			Props.TargetASC->TryActivateAbilitiesByTag(TagContainer);
+			if (Props.TargetCharacter ->Implements<UCombatInterface>() && !ICombatInterface::Execute_IsBeingShocked(Props.TargetCharacter))
+			{
+				FGameplayTagContainer TagContainer;
+				TagContainer.AddTag(FAuraGameplayTags::Get().Effects_HitReact);
+				Props.TargetASC->TryActivateAbilitiesByTag(TagContainer);
+			}
+		
 
 			FVector KnockbackForce = UAuraAbilitySystemLibrary::GetKnockbackForce(Props.EffectContextHandle);
 			ICombatInterface* CombatInterface = Cast<ICombatInterface>(Props.TargetAvatarActor);
