@@ -13,6 +13,7 @@ UPassiveNiagaraComponent::UPassiveNiagaraComponent()
 
 void UPassiveNiagaraComponent::BeginPlay()
 {
+	Super::BeginPlay();
 	if (UAuraAbilitySystemComponent* AuraASC = Cast<UAuraAbilitySystemComponent>(UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(GetOwner())))
 	{
 		AuraASC->ActivatePassiveEffect.AddUObject(this, &UPassiveNiagaraComponent::OnPassiveActivate);

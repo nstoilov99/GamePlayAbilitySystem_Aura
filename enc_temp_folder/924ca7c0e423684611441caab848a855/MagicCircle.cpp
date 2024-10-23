@@ -15,10 +15,12 @@ AMagicCircle::AMagicCircle()
 void AMagicCircle::BeginPlay()
 {
 	Super::BeginPlay();
+	
 }
 
 void AMagicCircle::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
 }
 
