@@ -44,6 +44,13 @@ FDamageEffectParams UAuraDamageGameplayAbility::MakeDamageEffectParamsFromClassD
 			Params.KnockbackForce = ToTarget * KnockbackMagnitude;
 		}
 	}
+	if (bIsRadialDamage)
+	{
+		Params.bIsRadialDamage = bIsRadialDamage;
+		Params.RadialDamageOrigin = RadialDamageOrigin;
+		Params.RadialDamageOuterRadius = RadialDamageOuterRadius;
+		Params.RadialDamageInnerRadius = RadialDamageInnerRadius;
+	}
 	return Params;
 }
 
