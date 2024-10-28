@@ -16,6 +16,7 @@
 #include "UI/Widget/DamageTextComponent.h"
 #include "Actor/MagicCircle.h"
 #include "NiagaraFunctionLibrary.h"
+#include "AuraARPG/AuraARPG.h"
 
 AAuraPlayerController::AAuraPlayerController()
 {
@@ -79,6 +80,7 @@ void AAuraPlayerController::CursorTrace()
 		ThisActor = nullptr;
 		return;
 	}
+	const ECollisionChannel TraceChannel = IsValid(MagicCircle) ? ECC_ExcludePlayers : ECC_Visibility;
 	GetHitResultUnderCursor(ECC_Visibility, false, CursorHit);
 	if (!CursorHit.bBlockingHit) return;
 
