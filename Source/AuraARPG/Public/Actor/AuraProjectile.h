@@ -41,12 +41,12 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	TObjectPtr<USphereComponent> Sphere;
-private:
-	UPROPERTY(EditDefaultsOnly)
-	float LifeSpan = 15.f;
 
 	bool IsValidOverlap(AActor* OtherActor);
 	bool bHit = false;
+private:
+	UPROPERTY(EditDefaultsOnly)
+	float LifeSpan = 15.f;
 
 	UPROPERTY(EditAnywhere)
 	TObjectPtr<UNiagaraSystem> ImpactEffect;
