@@ -40,7 +40,6 @@ void AAuraFireBall::OnHit()
 		UGameplayCueManager::ExecuteGameplayCue_NonReplicated(GetOwner(), FAuraGameplayTags::Get().GameplayCue_FireBlast, CueParams);
 	}
 
-
 	if (LoopingSoundComponent)
 	{
 		LoopingSoundComponent->Stop();
