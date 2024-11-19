@@ -24,6 +24,10 @@ public:
 	UMVVM_LoadSlot* GetLoadSlotViewModelByIndex(int32 Index) const;
 
 	void InitializeLoadSlots();
+
+	void SetNumLoadSlots(int32 InNumLoadSlots);
+
+	int32 GetNumLoadSlots() const { return NumLoadSlots; }
 private:
 
 	UPROPERTY()
@@ -37,4 +41,7 @@ private:
 
 	UPROPERTY()
 	TObjectPtr<UMVVM_LoadSlot> LoadSlot_2;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, FieldNotify, Setter, Getter, meta = (AllowPrivateAccess = "true"))
+	int32 NumLoadSlots;
 };
