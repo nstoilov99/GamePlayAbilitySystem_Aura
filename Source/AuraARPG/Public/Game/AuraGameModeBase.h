@@ -45,6 +45,8 @@ public:
 	
 	static void DeleteSlot(const FString& SlotName, int32 SlotIndex);
 
+	void TravelToMap(UMVVM_LoadSlot* Slot);
+
 protected:
 	virtual void BeginPlay() override;
 };
