@@ -50,6 +50,8 @@ public:
 
 	void SaveInGameProgressData(ULoadScreenSaveGame* InSaveObject);
 	
+	void SaveWorldState(UWorld* World);
+
 	static void DeleteSlot(const FString& SlotName, int32 SlotIndex);
 
 	void TravelToMap(UMVVM_LoadSlot* Slot);
