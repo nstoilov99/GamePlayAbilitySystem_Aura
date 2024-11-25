@@ -27,12 +27,6 @@ public:
 	virtual void LoadActor_Implementation() override;
 	/* end Save Interface */
 
-	/* Highlight Interface */
-	virtual void SetMoveToLocation_Implementation(FVector& OutDestination) override;
-	virtual void HighlightActor_Implementation() override;
-	virtual void UnHighlightActor_Implementation() override;
-	/* end Highlight Interface*/
-
 	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<USceneComponent> MoveToComponent;
 
@@ -51,6 +45,12 @@ protected:
 
 	virtual void BeginPlay() override;
 
+	/* Highlight Interface */
+	virtual void SetMoveToLocation_Implementation(FVector& OutDestination) override;
+	virtual void HighlightActor_Implementation() override;
+	virtual void UnHighlightActor_Implementation() override;
+	/* end Highlight Interface*/
+
 	UFUNCTION(BlueprintImplementableEvent)
 	void CheckpointReached(UMaterialInstanceDynamic* DynamicMaterialInstance);
 
@@ -59,8 +59,8 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	TObjectPtr<UStaticMeshComponent> CheckpointMesh;
-private:
-
+	
 	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<USphereComponent> Sphere;
+
 };

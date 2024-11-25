@@ -50,12 +50,14 @@ public:
 
 	void SaveInGameProgressData(ULoadScreenSaveGame* InSaveObject);
 	
-	void SaveWorldState(UWorld* World) const;
+	void SaveWorldState(UWorld* World, const FString& DestinationMapAssetName = FString("")) const;
 	void LoadWorldState(UWorld* World) const;
 
 	static void DeleteSlot(const FString& SlotName, int32 SlotIndex);
 
 	void TravelToMap(UMVVM_LoadSlot* Slot);
+
+	FString GetMapNameFromMapAssetName(const FString& MapAssetName) const; 
 
 	virtual AActor* ChoosePlayerStart_Implementation(AController* Player) override;
 
