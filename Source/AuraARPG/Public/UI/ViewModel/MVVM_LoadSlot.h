@@ -33,6 +33,9 @@ public:
 	UPROPERTY()
 	FName PlayerStartTag;
 
+	UPROPERTY()
+	FString MapAssetName;
+
 	void InitializeSlot();
 
 	/** Field Notifies **/

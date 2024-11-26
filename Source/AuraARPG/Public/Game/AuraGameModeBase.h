@@ -11,6 +11,7 @@ class UCharacterClassInfo;
 class UAbilityInfo;
 class UMVVM_LoadSlot;
 class USaveGame;
+class ULootTiers;
 /**
  * 
  */
@@ -26,6 +27,9 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability Info")
 	TObjectPtr<UAbilityInfo> AbilityInfo;
+
+	UPROPERTY(EditDefaultsOnly, Category = "LootTiers")
+	TObjectPtr<ULootTiers> LootTiers;
 
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<USaveGame> LoadScreenSaveGameClass;
@@ -60,6 +64,8 @@ public:
 	FString GetMapNameFromMapAssetName(const FString& MapAssetName) const; 
 
 	virtual AActor* ChoosePlayerStart_Implementation(AController* Player) override;
+
+	void PlayerDied(ACharacter* DeadCharacter);
 
 protected:
 	virtual void BeginPlay() override;
